@@ -9,7 +9,6 @@ import { MenuItem } from 'primeng/api';
 import { Student } from '../../core/models/student.model';
 import { StudentService } from '../../core/services/student.service';
 
-
 @Component({
   selector: 'app-overview',
   standalone: true,
@@ -26,8 +25,10 @@ import { StudentService } from '../../core/services/student.service';
 })
 export class OverviewComponent implements OnInit {
   students: Student[] = [];
+  first = 0;
+  rows = 20;
 
-  constructor(private studentService: StudentService) { }
+  constructor(private studentService: StudentService) {}
 
   ngOnInit(): void {
     this.loadStudents();
@@ -67,4 +68,15 @@ export class OverviewComponent implements OnInit {
     ];
   }
 
+  onPageChange(event: any): void {
+    this.first = event.first;
+    this.rows = event.rows;
+  }
+
+  get showingRange(): string {
+    const from = this.first + 1;
+    const to = Math.min(this.first + this.rows, this.students.length);
+    const total = this.students.length;
+    return `Showing ${from} to ${to} of ${total} entries`;
+  }
 }

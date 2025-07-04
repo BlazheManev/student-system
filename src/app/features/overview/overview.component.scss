@@ -142,3 +142,71 @@
   white-space: nowrap !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
+// PAGINATION PANEL
+::ng-deep .p-paginator {
+  background-color: #ffffff !important;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 12px 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+// LEFT TEXT ("Showing 1 to n of x entries")
+::ng-deep .p-paginator-left-content {
+  color: #6c6c6c;
+  font-size: 0.85rem;
+}
+
+// PAGE BUTTONS
+::ng-deep .p-paginator-pages .p-paginator-page {
+  margin: 0 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  border: none;
+  color: #555;
+  transition: all 0.2s ease-in-out;
+}
+
+::ng-deep .p-paginator-pages .p-paginator-page.p-highlight {
+  background-color: #433b4d;
+  color: #fff;
+}
+
+// NEXT / PREV / FIRST / LAST
+::ng-deep .p-paginator .p-paginator-first,
+::ng-deep .p-paginator .p-paginator-prev,
+::ng-deep .p-paginator .p-paginator-next,
+::ng-deep .p-paginator .p-paginator-last {
+  color: #555;
+  margin: 0 0.2rem;
+  border-radius: 6px;
+  padding: 0.5rem;
+  transition: background 0.2s;
+}
+
+::ng-deep .p-paginator .p-paginator-first:hover,
+::ng-deep .p-paginator .p-paginator-prev:hover,
+::ng-deep .p-paginator .p-paginator-next:hover,
+::ng-deep .p-paginator .p-paginator-last:hover {
+  background-color: #eaeaea;
+}
+
+// PAGE SIZE DROPDOWN
+::ng-deep .p-paginator .p-dropdown {
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  min-width: 70px;
+}
+
+::ng-deep .p-paginator .p-dropdown .p-dropdown-label {
+  padding: 0.3rem 0.5rem;
+}
+::ng-deep .p-paginator {
+  margin-top: 1.5rem; // You can increase/decrease as needed
+}
