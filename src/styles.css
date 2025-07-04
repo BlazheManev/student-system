@@ -1,33 +1,40 @@
+.p-paginator-page.p-paginator-page-selected {
+  background-color: #dfd8de !important; 
+  color: #333 !important;               
+  border-color: #ccc !important;       
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  cursor: default !important;
+}
 
- .p-multiselect-panel {
-	 background-color: #fff !important;
-	 box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
-	 border-radius: 10px !important;
-	 color: #333 !important;
-	 z-index: 10000 !important;
-	 max-height: 300px !important;
-	/* limit height */
-	 overflow-y: auto !important;
+.p-select-option.p-select-option-selected.p-focus {
+  background-color: #dfd8de !important; 
+  color: #333 !important;                
+  border-color: #ccc !important;       
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  cursor: default !important;
 }
-/* Dropdown items background */
- .p-multiselect-item {
-	 background-color: #fff !important;
-	 color: #333 !important;
+
+.p-select-option.p-select-option-selected,
+.p-button-text.p-button.p-component {
+  background-color: #dfd8de !important; 
+  color: #333 !important;               
+  border-color: #ccc !important;        
+  font-weight: 600 !important;
+  box-shadow: none !important;
 }
-/* Scrollbar styling */
- .p-multiselect-items-wrapper {
-	 scrollbar-width: thin;
-	 scrollbar-color: #5c6bc0 #e0e0e0;
+::ng-deep .p-menuitem-link {
+  display: block !important;          
+  width: 100% !important;             
+  padding: 0.75rem 1rem !important;  
+  cursor: pointer !important;
+  user-select: none !important;
+  color: inherit !important;
+  text-decoration: none !important;
 }
- .p-multiselect-items-wrapper::-webkit-scrollbar {
-	 width: 8px;
+
+::ng-deep .p-menuitem {
+  padding: 0 !important;              
+  width: 100% !important;
 }
- .p-multiselect-items-wrapper::-webkit-scrollbar-track {
-	 background: #e0e0e0;
-}
- .p-multiselect-items-wrapper::-webkit-scrollbar-thumb {
-	 background-color: #5c6bc0;
-	 border-radius: 10px;
-	 border: 2px solid #e0e0e0;
-}
- 

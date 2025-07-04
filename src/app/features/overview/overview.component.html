@@ -1,27 +1,12 @@
 <div class="overview-header">
   <h2>Seznam študentov</h2>
-  <button
-    pButton
-    icon="pi pi-plus"
-    label="Dodaj novega"
-    class="p-button-primary"
-    (click)="onAdd()"
-  ></button>
+  <button pButton icon="pi pi-plus" label="Dodaj novega" class="p-button-primary" (click)="onAdd()"></button>
 </div>
 
-<p-table
-  [value]="students"
-  [paginator]="true"
-  [rows]="rows"
-  [rowsPerPageOptions]="[10, 25, 50, 100]"
-  [first]="first"
-  (onPage)="onPageChange($event)"
-  responsiveLayout="scroll"
-  class="p-datatable-gridlines styled-table"
-  [showCurrentPageReport]="true"
-  currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"
-  [totalRecords]="students.length"
->
+<p-table [value]="students" [paginator]="true" [rows]="rows" [rowsPerPageOptions]="[10, 25, 50, 100]" [first]="first"
+  (onPage)="onPageChange($event)" responsiveLayout="scroll" class="p-datatable-gridlines styled-table"
+  [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"
+  [totalRecords]="students.length">
   <!-- Table Header -->
   <ng-template pTemplate="header">
     <tr>
@@ -47,19 +32,8 @@
         </ng-container>
       </td>
       <td>
-        <button
-          type="button"
-          pButton
-          icon="pi pi-ellipsis-v"
-          class="p-button-text"
-          (click)="menu.toggle($event)"
-        ></button>
-        <p-menu
-          #menu
-          [popup]="true"
-          [model]="getRowMenu(student)"
-          appendTo="body"
-        ></p-menu>
+        <button type="button" pButton label="⋮" class="p-button-text" (click)="menu.toggle($event)"></button>
+        <p-menu #menu [popup]="true" [model]="getRowMenu(student)" appendTo="body"></p-menu>
       </td>
     </tr>
   </ng-template>

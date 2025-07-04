@@ -107,11 +107,7 @@
 	color: #000;
 }
 
-::ng-deep .p-menuitem-icon {
-	margin-right: 0.5rem;
-	color: #666;
-	font-size: 1rem;
-}
+
 
 ::ng-deep .p-button-text {
 	color: #5c5c5c;
@@ -159,7 +155,6 @@
 
 ::ng-deep .p-paginator-pages .p-paginator-page {
 	border-radius: 6px !important;
-	background-color: #fff !important;
 	border: 1px solid #ccc !important;
 	padding: 0.5rem 0.75rem !important;
 	margin: 0 0.2rem !important;
@@ -293,4 +288,12 @@
 /* Dropdown panel border */
 .p-dropdown-panel {
   border-color: #007bff !important;
+}
+::ng-deep button.p-button-text.p-button-icon-only .pi-ellipsis-v {
+  color: #555 !important;          /* Darker gray color */
+  font-size: 1.3rem !important;    /* Slightly bigger icon */
+  opacity: 1 !important;           /* Make sure fully opaque */
+}::ng-deep button.p-button-text.p-button-icon-only:hover .pi-ellipsis-v {
+  color: #222 !important;          /* Darker on hover */
+  cursor: pointer;
 }

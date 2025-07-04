@@ -34,7 +34,7 @@ export class OverviewComponent implements OnInit {
   constructor(
     private studentService: StudentService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loadStudents();
@@ -73,7 +73,7 @@ export class OverviewComponent implements OnInit {
       }
     ];
   }
-next(): void {
+  next(): void {
     this.first = this.first + this.rows;
   }
 
