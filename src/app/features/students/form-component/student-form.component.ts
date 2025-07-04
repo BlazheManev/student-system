@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ButtonModule } from 'primeng/button';
-import { StudentService } from '../../core/services/student.service';
+import { StudentService } from '../../../core/services/student.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Student } from '../../core/models/student.model';
+import { Student } from '../../../core/models/student.model';
 
 @Component({
   selector: 'app-student-form',

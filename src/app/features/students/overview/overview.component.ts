@@ -6,8 +6,8 @@ import { TagModule } from 'primeng/tag';
 import { MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
 import { MenuItem } from 'primeng/api';
-import { Student } from '../../core/models/student.model';
-import { StudentService } from '../../core/services/student.service';
+import { Student } from '../../../core/models/student.model';
+import { StudentService } from '../../../core/services/student.service';
 import { Router } from '@angular/router';
 
 @Component({

@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { OverviewComponent } from './overview.component';
 import { of, throwError } from 'rxjs';
-import { StudentService } from '../../core/services/student.service';
+import { StudentService } from '../../../core/services/student.service';
 import { Router } from '@angular/router';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { Student } from '../../core/models/student.model';
+import { Student } from '../../../core/models/student.model';
 
 describe('OverviewComponent', () => {
   let component: OverviewComponent;
