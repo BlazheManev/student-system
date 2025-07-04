@@ -17,7 +17,7 @@ import { Student } from '../../core/models/student.model';
     ButtonModule
   ],
   templateUrl: './student-form.component.html',
-  styleUrls: ['./student-form.component.scss']
+  styleUrls: ['./student-form.component.css']
 })
 export class StudentFormComponent implements OnInit {
   form!: FormGroup;

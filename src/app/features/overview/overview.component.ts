@@ -10,7 +10,6 @@ import { Student } from '../../core/models/student.model';
 import { StudentService } from '../../core/services/student.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-overview',
   standalone: true,
@@ -23,7 +22,7 @@ import { Router } from '@angular/router';
     ButtonModule,
   ],
   templateUrl: './overview.component.html',
-  styleUrls: ['./overview.component.scss']
+  styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent implements OnInit {
   students: Student[] = [];
@@ -32,11 +31,9 @@ export class OverviewComponent implements OnInit {
 
   editingStudent: Student | null = null;
 
-  allCourses: string[] = ['Math', 'Physics', 'Chemistry', 'Biology', 'History'];
-
   constructor(
     private studentService: StudentService,
-    private router: Router 
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -51,13 +48,11 @@ export class OverviewComponent implements OnInit {
   }
 
   onAdd(): void {
-    this.router.navigate(['/student/add']);  // Navigate to add form page
+    this.router.navigate(['/student/add']);
   }
 
-   onEdit(id: number): void {
-    console.log("Sfsfsf")
-    console.log(id)
-    this.router.navigate(['/student/edit', id]);  // Navigate to edit form page with student ID
+  onEdit(id: number): void {
+    this.router.navigate(['/student/edit', id]);
   }
 
   onDelete(id: number): void {
@@ -78,21 +73,29 @@ export class OverviewComponent implements OnInit {
       }
     ];
   }
+next(): void {
+    this.first = this.first + this.rows;
+  }
+
+  prev(): void {
+    this.first = this.first - this.rows;
+  }
+
+  reset(): void {
+    this.first = 0;
+  }
+
+  isLastPage(): boolean {
+    return this.students ? this.first + this.rows >= this.students.length : true;
+  }
+
+  isFirstPage(): boolean {
+    return this.students ? this.first === 0 : true;
+  }
 
   onPageChange(event: any): void {
     this.first = event.first;
     this.rows = event.rows;
   }
 
-  onSave(updatedStudent: Student) {
-    // Call update API (make sure you have this in your service)
-    this.studentService.update(updatedStudent.id, updatedStudent).subscribe(() => {
-      this.loadStudents();
-      this.editingStudent = null;
-    });
-  }
-
-  onCancelEdit() {
-    this.editingStudent = null;
-  }
 }
