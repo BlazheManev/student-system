@@ -27,7 +27,7 @@ import { StudentService } from '../../core/services/student.service';
 export class OverviewComponent implements OnInit {
   students: Student[] = [];
 
-  constructor(private studentService: StudentService) {}
+  constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
     this.loadStudents();
@@ -57,15 +57,14 @@ export class OverviewComponent implements OnInit {
   getRowMenu(student: Student): MenuItem[] {
     return [
       {
-        label: 'Uredi',
-        icon: 'pi pi-pencil',
+        label: '✏️ Uredi',
         command: () => this.onEdit(student.id)
       },
       {
-        label: 'Izbriši',
-        icon: 'pi pi-trash',
+        label: '🗑️ Izbriši',
         command: () => this.onDelete(student.id)
       }
     ];
   }
+
 }

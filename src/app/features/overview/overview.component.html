@@ -1,66 +1,37 @@
 <div class="overview-header">
-  <h2>Seznam študentov</h2>
-  <button
-    pButton
-    icon="pi pi-plus"
-    label="Dodaj novega"
-    class="p-button-primary"
-    (click)="onAdd()"
-  ></button>
+    <h2>Seznam študentov</h2>
+    <button pButton icon="pi pi-plus" label="Dodaj novega" class="p-button-primary" (click)="onAdd()"></button>
 </div>
 
-<p-table
-  [value]="students"
-  [paginator]="true"
-  [rows]="20"
-  [rowsPerPageOptions]="[20, 50, 100]"
-  responsiveLayout="scroll"
-  class="p-datatable-gridlines styled-table"
->
-  <ng-template pTemplate="header">
-    <tr>
-      <th>#</th>
-      <th>Ime</th>
-      <th>Priimek</th>
-      <th>Email</th>
-      <th>Predmeti</th>
-      <th>Status</th>
-      <th>Tip</th>
-      <th>Dejanja</th>
-    </tr>
-  </ng-template>
+<p-table [value]="students" [paginator]="true" [rows]="20" [rowsPerPageOptions]="[20, 50, 100]"
+    responsiveLayout="scroll" class="p-datatable-gridlines styled-table">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>#</th>
+            <th>Ime</th>
+            <th>Priimek</th>
+            <th>Email</th>
+            <th>Predmeti</th>
+            <th>Dejanja</th>
+        </tr>
+    </ng-template>
 
-  <ng-template pTemplate="body" let-student let-i="rowIndex">
-    <tr>
-      <td>{{ i + 1 }}</td>
-      <td>{{ student.firstName }}</td>
-      <td>{{ student.lastName }}</td>
-      <td>{{ student.email }}</td>
-      <td>
-        <ng-container *ngFor="let course of student.courses">
-          <p-tag [value]="course" class="tag-purple"></p-tag>
-        </ng-container>
-      </td>
-      <td>
-        <p-tag value="OPEN" severity="info"></p-tag>
-      </td>
-      <td>
-        <p-tag value="MULTI (2)" class="tag-dark"></p-tag>
-      </td>
-      <td>
-        <button
-          pButton
-          icon="pi pi-pencil"
-          class="p-button-text"
-          (click)="onEdit(student.id)"
-        ></button>
-        <button
-          pButton
-          icon="pi pi-trash"
-          class="p-button-text p-button-danger"
-          (click)="onDelete(student.id)"
-        ></button>
-      </td>
-    </tr>
-  </ng-template>
+    <ng-template pTemplate="body" let-student let-i="rowIndex">
+        <tr>
+            <td>{{ i + 1 }}</td>
+            <td>{{ student.firstName }}</td>
+            <td>{{ student.lastName }}</td>
+            <td>{{ student.email }}</td>
+            <td>
+                <ng-container *ngFor="let course of student.courses">
+<p-tag [value]="course" severity="info"></p-tag>
+                </ng-container>
+            </td>
+            <td>
+                <button type="button" pButton icon="pi pi-ellipsis-v" class="p-button-text"
+                    (click)="menu.toggle($event)"></button>
+                <p-menu #menu [popup]="true" [model]="getRowMenu(student)" appendTo="body"></p-menu>
+            </td>
+        </tr>
+    </ng-template>
 </p-table>

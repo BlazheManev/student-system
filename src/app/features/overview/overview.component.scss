@@ -29,6 +29,7 @@
   }
 }
 
+// TABLE STYLING
 ::ng-deep .styled-table {
   border-radius: 10px;
   overflow: hidden;
@@ -64,6 +65,7 @@
   background: transparent;
 }
 
+// TAGS
 ::ng-deep .p-tag {
   border-radius: 999px;
   font-size: 0.75rem;
@@ -72,32 +74,44 @@
   margin-right: 0.25rem;
 }
 
-// Custom tag colors (based on screenshot)
 ::ng-deep .p-tag-info {
   background-color: #29b6f6;
   color: white;
 }
 
-::ng-deep .p-tag-success {
-  background-color: #66bb6a;
-  color: white;
+// DROPDOWN MENU STYLING
+::ng-deep .p-menu {
+  padding: 0;
+  border-radius: 8px;
+  background-color: #fff;
+  min-width: 140px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e0e0e0;
+  z-index: 9999;
 }
 
-::ng-deep .p-tag-danger {
-  background-color: #ef5350;
-  color: white;
+::ng-deep .p-menuitem {
+  font-size: 0.85rem;
 }
 
-::ng-deep .tag-purple {
-  background-color: #7e57c2;
-  color: white;
+::ng-deep .p-menuitem-link {
+  padding: 0.7rem 1rem;
+  color: #333;
+  font-size: 14px;
+  transition: background 0.2s ease;
 }
 
-::ng-deep .tag-dark {
-  background-color: #5a4d6e;
-  color: white;
+::ng-deep .p-menuitem-link:hover {
+  background-color: #f0f0f0;
+  color: #000;
 }
 
+::ng-deep .p-menuitem-icon {
+  margin-right: 0.5rem;
+  color: #777;
+}
+
+// BUTTONS
 ::ng-deep .p-button-text {
   color: #5c5c5c;
 }
@@ -108,4 +122,17 @@
 
 ::ng-deep .p-dropdown {
   border-radius: 6px;
+}
+::ng-deep .p-tag.p-tag-info {
+  background-color: #29b6f6 !important;
+  color: #ffffff !important;
+  border-radius: 999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  padding: 0.4rem 1rem !important;
+  margin: 0.25rem 0.4rem 0.25rem 0 !important;
+  display: inline-block !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
