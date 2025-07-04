@@ -1,47 +1,44 @@
-Student Information System - README
+# Student Information System - README
 
-Naloga:
------------------------------------------------------------------------------------------------------------------------------------------------
-Implement a simple student information system, where the user can:
-   - add a new student (basic student information and courses that student will be part of),
-   - edit the student (courses only),
-   - delete a student.
- You will also have to implement a page with an overview of all students (a table where each row displays student information). Table should have pagination with 20 students per page.
+## Overview
 
-Attached to this email is a screenshot of a different table. Try to approach its appearance, to test your HTML and CSS skills. Ignore features that are not included in task description (like timezone dropdown, expandable rows, "super admin" tag, left sidebar...)
+This project is a simple student information system built with the latest Angular framework and PrimeNG component library. The system allows users to:
 
- Requirements:
- - Routing (/overview page should be lazily loaded)
+- Add a new student with basic information and assigned courses.
+- Edit student courses.
+- Delete students.
+- View all students in a paginated overview table (20 students per page).
 
- Required technologies:
- - Latest Angular
- - PrimeNg (component library)
- -----------------------------------------------------------------------------------------------------------------------------------------------
-Predlagamo, da za hranjenje kode uporabite enega od javnih ponudnikov Git-a (Github, BitBucket...) nam pa pošljete le uporabniška navodila za zagon in testiranje delovanja. Za "simulacijo" HTTP klicev na zaledni sistem lahko uporabite poljuben pristop (file, hardcodirane vrednosti ...). Lahko tudi "fake server" (https://github.com/typicode/json-server).
+The UI tries to closely follow the provided design reference for the overview table.
 
-Oddaja naloge ni časovno omejena, zato si lahko vzamete toliko časa, kot potrebujete.
-
-Če imate kakršna koli vprašanja v zvezi z nalogo, me lahko brez zadržkov kontaktirate.
+---
 
 ## Project Structure
 
 ```
 src/
 |-- app/
-|   |-- features/
-|   |   |-- overview/
-|   |   |   |-- overview.component.ts
-|   |   |   |-- overview.component.html
-|   |   |   |-- overview.component.css
-|   |   |-- student/
-|   |       |-- student-form.component.ts
-|   |       |-- student-form.component.html
-|   |       |-- student-form.component.css
 |   |-- core/
-|       |-- models/
-|       |   |-- student.model.ts
-|       |-- services/
-|           |-- student.service.ts
+|   |   |-- models/
+|   |   |   |-- student.model.ts
+|   |   |-- services/
+|   |       |-- student.service.ts
+|   |-- features/
+|       |-- students/
+|           |-- form-component/
+|               |-- student-form.component.ts
+|               |-- student-form.component.html
+|               |-- student-form.component.css
+|           |-- overview/
+|               |-- overview.component.ts
+|               |-- overview.component.html
+|               |-- overview.component.css
+|           |-- student.routes.ts
+|       |-- app.routes.ts
+|       |-- app.config.ts
+|       |-- app.component.ts
+|       |-- app.component.html
+|       |-- app.component.css
 |-- assets/
 |-- environments/
 |   |-- environment.ts
@@ -49,37 +46,70 @@ src/
 |-- styles.css
 |-- main.ts
 |-- index.html
+```
 
-## Docker
+---
 
-- Dockerfile created to build Angular app and serve with nginx
-- Docker commands:
-  - `docker build -t your-dockerhub-username/student-system .`
-  - `docker run -p 80:80 your-dockerhub-username/student-system`
+## Features
 
-## Tests
+- **Routing:** Lazy loading enabled for the `/overview` page.
+- **Pagination:** Student list table paginates with 20 students per page.
+- **Data Persistence:** Supports backend simulation using `json-server` or hardcoded data.
+- **Component Testing:** Unit tests are implemented using Angular TestBed and Jasmine.
+- **Docker:** Dockerfile included for containerized deployment.
+- **CI/CD:** GitHub Actions configured to run unit tests on every push to the `master` branch.
+- **Deployment:** Application deployed on Vercel for easy access.
 
-- Unit tests using Angular TestBed and Jasmine
-- Tests located alongside components as `.spec.ts` files
-- Run tests locally with `ng test` or in CI with GitHub Actions
-- GitHub Actions configured to run tests on push, pull request, and manually
+---
 
-## Running locally
+## Running the Project Locally
 
-- Start json-server separately with:
-  ```bash
-  json-server --watch db.json --port 3000
-  ```
-- Run Angular app with:
-  ```bash
-  ng serve
-  ```
-- The Angular app expects API at `http://localhost:3000` (configurable via environments)
+1. Start the fake backend server:
+
+   ```bash
+   json-server --watch db.json --port 3000
+   ```
+
+2. Serve the Angular app:
+
+   ```bash
+   ng serve
+   ```
+
+3. The Angular app expects the backend API at `http://localhost:3000` (this URL is configurable in the environment files).
+
+---
+
+## Docker Usage
+
+To build and run the application inside a Docker container:
+
+```bash
+docker build -t blazhe/student-system .
+docker run -p 80:80 blazhe/student-system
+```
+
+---
+
+## CI/CD Pipeline
+
+- GitHub Actions workflow runs unit tests automatically on every push to the `master` branch.
+- Node.js 18.x environment is used to meet Angular CLI requirements.
+- Tests are executed with coverage reports to ensure code quality.
+
+---
+
+## Deployment
+
+- The latest version of the app is deployed on Vercel.
+- Vercel automatically builds and deploys on every push to the main branch.
+- Visit the deployed URL to access the live app.
+
+---
 
 ## Notes
 
-- Use environment files to manage API URLs
-- Proxy config can be used during development if needed
-- Tests require HttpClientTestingModule and RouterTestingModule providers
-- GitHub Actions setup uses Node.js 18.x to meet Angular CLI requirements
-
+- Environment files (`environment.ts` and `environment.prod.ts`) manage API URLs and other environment-specific settings.
+- Proxy configuration can be added during development to forward API requests.
+- Tests require HttpClientTestingModule and RouterTestingModule for HTTP and routing mocks.
+- The project uses Angular 16+ and PrimeNG latest versions.
