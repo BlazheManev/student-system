@@ -122,7 +122,7 @@
 }
 
 ::ng-deep .p-tag.p-tag-info {
-	background-color: #29b6f6 !important;
+	background-color: #8d6786 !important;
 	color: #fff !important;
 	border-radius: 999px !important;
 	font-size: 0.75rem !important;
@@ -296,4 +296,29 @@
 }::ng-deep button.p-button-text.p-button-icon-only:hover .pi-ellipsis-v {
   color: #222 !important;          /* Darker on hover */
   cursor: pointer;
+}/* Add alternating row background colors (striped rows) */
+::ng-deep .styled-table .p-datatable-tbody > tr:nth-child(odd) > td {
+  background-color: #fff !important; /* White for odd rows */
+}
+
+::ng-deep .styled-table .p-datatable-tbody > tr:nth-child(even) > td {
+  background-color: #f6f4f7 !important; 
+}
+::ng-deep .p-paginator .p-paginator-right {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+::ng-deep .p-paginator-rpp-dropdown::before {
+  content: none !important;
+}
+
+::ng-deep .p-paginator .paginator-show-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  user-select: none;
+  margin-right: 0.4rem;
+  align-self: center;
 }

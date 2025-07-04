@@ -37,4 +37,9 @@
 ::ng-deep .p-menuitem {
   padding: 0 !important;              
   width: 100% !important;
+}body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #f0eff0;
+  font-family: 'Segoe UI', sans-serif;
 }
