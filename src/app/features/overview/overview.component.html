@@ -19,11 +19,11 @@
   responsiveLayout="scroll"
   class="p-datatable-gridlines styled-table"
 >
-  <!-- Pagination Text Left -->
   <ng-template pTemplate="paginatorleft">
     <span class="pagination-summary">{{ showingRange }}</span>
   </ng-template>
 
+  <!-- Table Header -->
   <ng-template pTemplate="header">
     <tr>
       <th>#</th>
@@ -35,6 +35,7 @@
     </tr>
   </ng-template>
 
+  <!-- Table Body -->
   <ng-template pTemplate="body" let-student let-i="rowIndex">
     <tr>
       <td>{{ i + 1 }}</td>
