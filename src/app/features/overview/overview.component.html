@@ -18,12 +18,15 @@
   (onPageChange)="onPageChange($event)"
   responsiveLayout="scroll"
   class="p-datatable-gridlines styled-table"
+  [showCurrentPageReport]="true"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"
+  paginatorTemplate="RowsPerPageDropdown PrevPageLink PageLinks NextPageLink"
 >
+  <!-- Left side: showing range -->
   <ng-template pTemplate="paginatorleft">
-    <span class="pagination-summary">{{ showingRange }}</span>
   </ng-template>
 
-  <!-- Table Header -->
+  <!-- Table header -->
   <ng-template pTemplate="header">
     <tr>
       <th>#</th>
@@ -35,10 +38,10 @@
     </tr>
   </ng-template>
 
-  <!-- Table Body -->
+  <!-- Table body -->
   <ng-template pTemplate="body" let-student let-i="rowIndex">
     <tr>
-      <td>{{ i + 1 }}</td>
+      <td>{{ first + i + 1 }}</td>
       <td>{{ student.firstName }}</td>
       <td>{{ student.lastName }}</td>
       <td>{{ student.email }}</td>

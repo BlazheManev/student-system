@@ -26,7 +26,7 @@ import { StudentService } from '../../core/services/student.service';
 export class OverviewComponent implements OnInit {
   students: Student[] = [];
   first = 0;
-  rows = 20;
+  rows = 10;
 
   constructor(private studentService: StudentService) {}
 
@@ -73,10 +73,4 @@ export class OverviewComponent implements OnInit {
     this.rows = event.rows;
   }
 
-  get showingRange(): string {
-    const from = this.first + 1;
-    const to = Math.min(this.first + this.rows, this.students.length);
-    const total = this.students.length;
-    return `Showing ${from} to ${to} of ${total} entries`;
-  }
 }
