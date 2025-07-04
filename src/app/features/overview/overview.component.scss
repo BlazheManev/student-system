@@ -238,3 +238,23 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+::ng-deep .p-paginator {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+::ng-deep .p-paginator .p-paginator-current {
+  order: 0;
+  flex-grow: 1;
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+  font-size: 0.875rem;
+}
+
+::ng-deep .p-paginator .p-paginator-right {
+  order: 1;
+  display: flex;
+  gap: 0.5rem;
+}

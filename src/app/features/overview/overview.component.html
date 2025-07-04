@@ -20,13 +20,9 @@
   class="p-datatable-gridlines styled-table"
   [showCurrentPageReport]="true"
   currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"
-  paginatorTemplate="RowsPerPageDropdown PrevPageLink PageLinks NextPageLink"
+  paginatorTemplate="CurrentPageReport RowsPerPageDropdown PrevPageLink PageLinks NextPageLink"
 >
-  <!-- Left side: showing range -->
-  <ng-template pTemplate="paginatorleft">
-  </ng-template>
-
-  <!-- Table header -->
+  <!-- Table Header -->
   <ng-template pTemplate="header">
     <tr>
       <th>#</th>
@@ -38,7 +34,7 @@
     </tr>
   </ng-template>
 
-  <!-- Table body -->
+  <!-- Table Body -->
   <ng-template pTemplate="body" let-student let-i="rowIndex">
     <tr>
       <td>{{ first + i + 1 }}</td>
