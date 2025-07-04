@@ -11,13 +11,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideAnimations(),
     providePrimeNG({
-      ripple: true,
-      theme: {
-        options: {
-          presetName: 'dark-purple', 
-          prefix: 'p',
-        }
-      }
+      ripple: true
     })
   ]
 };

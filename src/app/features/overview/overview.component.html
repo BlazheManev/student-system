@@ -1,4 +1,4 @@
-a<div class="overview-header">
+<div class="overview-header">
   <h2>Seznam študentov</h2>
   <button
     pButton
@@ -12,10 +12,10 @@ a<div class="overview-header">
 <p-table
   [value]="students"
   [paginator]="true"
-  [rows]="10"
-  [rowsPerPageOptions]="[10, 25, 50, 100]"
+  [rows]="20"
+  [rowsPerPageOptions]="[20, 50, 100]"
   responsiveLayout="scroll"
-  class="p-datatable-gridlines student-table"
+  class="p-datatable-gridlines styled-table"
 >
   <ng-template pTemplate="header">
     <tr>
@@ -24,7 +24,9 @@ a<div class="overview-header">
       <th>Priimek</th>
       <th>Email</th>
       <th>Predmeti</th>
-      <th style="width: 100px;">Dejanja</th>
+      <th>Status</th>
+      <th>Tip</th>
+      <th>Dejanja</th>
     </tr>
   </ng-template>
 
@@ -36,28 +38,28 @@ a<div class="overview-header">
       <td>{{ student.email }}</td>
       <td>
         <ng-container *ngFor="let course of student.courses">
-          <p-tag
-            [value]="course"
-            severity="info"
-            class="course-tag"
-          ></p-tag>
+          <p-tag [value]="course" class="tag-purple"></p-tag>
         </ng-container>
       </td>
       <td>
-        <div class="action-buttons">
-          <button
-            pButton
-            icon="pi pi-pencil"
-            class="p-button-text p-button-sm"
-            (click)="onEdit(student.id)"
-          ></button>
-          <button
-            pButton
-            icon="pi pi-trash"
-            class="p-button-text p-button-danger p-button-sm"
-            (click)="onDelete(student.id)"
-          ></button>
-        </div>
+        <p-tag value="OPEN" severity="info"></p-tag>
+      </td>
+      <td>
+        <p-tag value="MULTI (2)" class="tag-dark"></p-tag>
+      </td>
+      <td>
+        <button
+          pButton
+          icon="pi pi-pencil"
+          class="p-button-text"
+          (click)="onEdit(student.id)"
+        ></button>
+        <button
+          pButton
+          icon="pi pi-trash"
+          class="p-button-text p-button-danger"
+          (click)="onDelete(student.id)"
+        ></button>
       </td>
     </tr>
   </ng-template>

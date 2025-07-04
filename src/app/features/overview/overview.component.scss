@@ -1,48 +1,111 @@
+:host {
+  display: block;
+  background-color: #f0f2f5;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 .overview-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
-}
-
-.student-table {
-  background-color: #f8f8f9;
-  border-radius: 8px;
   padding: 1rem;
-}
-
-.student-table ::ng-deep .p-datatable-thead > tr > th {
   background-color: #433b4d;
-  color: #ffffff;
-  font-weight: 600;
-  border-bottom: 2px solid #5a4d6e;
-  font-size: 0.85rem;
-}
-
-.student-table ::ng-deep .p-datatable-tbody > tr > td {
-  color: #333;
-  font-size: 0.85rem;
-  vertical-align: middle;
-  background-color: #fcfcfd;
-}
-
-.student-table ::ng-deep .p-tag.course-tag {
-  margin: 2px 4px 2px 0;
-  font-size: 0.7rem;
-  border-radius: 1rem;
-  background-color: #5a9bd4;
+  border-radius: 8px;
   color: white;
-  padding: 0.3rem 0.75rem;
+
+  h2 {
+    margin: 0;
+  }
+
+  .p-button {
+    background-color: #5c4b6d;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    color: #fff;
+  }
 }
 
-.student-table ::ng-deep .p-button.p-button-text {
-  color: #555;
+::ng-deep .styled-table {
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 14px;
+  background: #f5f6fa;
 }
 
-.student-table ::ng-deep .p-button.p-button-danger {
-  color: #d9534f;
+::ng-deep .styled-table .p-datatable-thead > tr > th {
+  background-color: #3e314c;
+  color: white;
+  font-weight: 600;
+  padding: 0.9rem 1rem;
+  font-size: 0.85rem;
+  border: none;
 }
 
-.student-table ::ng-deep .p-paginator .p-dropdown {
-  width: 70px;
+::ng-deep .styled-table .p-datatable-tbody > tr > td {
+  background-color: #ffffff;
+  color: #333;
+  border: none;
+  padding: 0.9rem 1rem;
+  vertical-align: middle;
+}
+
+::ng-deep .p-datatable-tbody > tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+::ng-deep .styled-table .p-paginator {
+  border-top: none;
+  padding: 1rem 0.5rem;
+  justify-content: space-between;
+  background: transparent;
+}
+
+::ng-deep .p-tag {
+  border-radius: 999px;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  font-weight: 500;
+  margin-right: 0.25rem;
+}
+
+// Custom tag colors (based on screenshot)
+::ng-deep .p-tag-info {
+  background-color: #29b6f6;
+  color: white;
+}
+
+::ng-deep .p-tag-success {
+  background-color: #66bb6a;
+  color: white;
+}
+
+::ng-deep .p-tag-danger {
+  background-color: #ef5350;
+  color: white;
+}
+
+::ng-deep .tag-purple {
+  background-color: #7e57c2;
+  color: white;
+}
+
+::ng-deep .tag-dark {
+  background-color: #5a4d6e;
+  color: white;
+}
+
+::ng-deep .p-button-text {
+  color: #5c5c5c;
+}
+
+::ng-deep .p-button-danger {
+  color: #f44336;
+}
+
+::ng-deep .p-dropdown {
+  border-radius: 6px;
 }
