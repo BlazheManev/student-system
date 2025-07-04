@@ -3,13 +3,19 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
+import { PaginatorModule } from 'primeng/paginator';
 import { Student } from '../../core/models/student.model';
 import { StudentService } from '../../core/services/student.service';
 
 @Component({
   selector: 'app-overview',
   standalone: true,
-  imports: [CommonModule, TableModule, ButtonModule],
+  imports: [
+    CommonModule,
+    TableModule,
+    ButtonModule,
+    PaginatorModule
+  ],
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss']
 })
@@ -37,8 +43,6 @@ export class OverviewComponent implements OnInit {
   }
 
   onDelete(id: number): void {
-    this.studentService.delete(id).subscribe(() => {
-      this.loadStudents(); // reload after delete
-    });
+    this.studentService.delete(id).subscribe(() => this.loadStudents());
   }
 }

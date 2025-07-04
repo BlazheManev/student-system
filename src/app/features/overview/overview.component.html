@@ -1,16 +1,22 @@
 <div class="overview-header">
   <h2>Seznam študentov</h2>
-  <button pButton type="button" label="Dodaj novega" icon="pi pi-plus" (click)="onAdd()"></button>
+  <button pButton icon="pi pi-plus" label="Dodaj novega" class="p-button-primary" (click)="onAdd()"></button>
 </div>
 
-<p-table [value]="students" [paginator]="true" [rows]="20" responsiveLayout="scroll">
+<p-table
+  [value]="students"
+  [paginator]="true"
+  [rows]="10"
+  responsiveLayout="scroll"
+  class="p-datatable-gridlines custom-table"
+>
   <ng-template pTemplate="header">
     <tr>
       <th>Ime</th>
       <th>Priimek</th>
       <th>Email</th>
       <th>Predmeti</th>
-      <th>Dejanja</th>
+      <th style="width: 100px;">Dejanja</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-student>
@@ -20,8 +26,8 @@
       <td>{{ student.email }}</td>
       <td>{{ student.courses.join(', ') }}</td>
       <td>
-        <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-text" (click)="onEdit(student.id)"></button>
-        <button pButton icon="pi pi-trash" class="p-button-rounded p-button-text p-button-danger" (click)="onDelete(student.id)"></button>
+        <button pButton icon="pi pi-pencil" class="p-button-text" (click)="onEdit(student.id)"></button>
+        <button pButton icon="pi pi-trash" class="p-button-text p-button-danger" (click)="onDelete(student.id)"></button>
       </td>
     </tr>
   </ng-template>
