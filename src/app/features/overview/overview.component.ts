@@ -8,6 +8,8 @@ import { ButtonModule } from 'primeng/button';
 import { MenuItem } from 'primeng/api';
 import { Student } from '../../core/models/student.model';
 import { StudentService } from '../../core/services/student.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-overview',
@@ -18,7 +20,7 @@ import { StudentService } from '../../core/services/student.service';
     TableModule,
     TagModule,
     MenuModule,
-    ButtonModule
+    ButtonModule,
   ],
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss']
@@ -28,7 +30,14 @@ export class OverviewComponent implements OnInit {
   first = 0;
   rows = 10;
 
-  constructor(private studentService: StudentService) {}
+  editingStudent: Student | null = null;
+
+  allCourses: string[] = ['Math', 'Physics', 'Chemistry', 'Biology', 'History'];
+
+  constructor(
+    private studentService: StudentService,
+    private router: Router 
+  ) {}
 
   ngOnInit(): void {
     this.loadStudents();
@@ -42,11 +51,11 @@ export class OverviewComponent implements OnInit {
   }
 
   onAdd(): void {
-    console.log('Add student clicked');
+    this.router.navigate(['/student/add']);  // Navigate to add form page
   }
 
-  onEdit(id: number): void {
-    console.log('Edit student with ID:', id);
+   onEdit(id: number): void {
+    this.router.navigate(['/student/edit', id]);  // Navigate to edit form page with student ID
   }
 
   onDelete(id: number): void {
@@ -73,4 +82,15 @@ export class OverviewComponent implements OnInit {
     this.rows = event.rows;
   }
 
+  onSave(updatedStudent: Student) {
+    // Call update API (make sure you have this in your service)
+    this.studentService.update(updatedStudent.id, updatedStudent).subscribe(() => {
+      this.loadStudents();
+      this.editingStudent = null;
+    });
+  }
+
+  onCancelEdit() {
+    this.editingStudent = null;
+  }
 }

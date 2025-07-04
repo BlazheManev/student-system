@@ -25,7 +25,7 @@
   <!-- Table Header -->
   <ng-template pTemplate="header">
     <tr>
-      <th>#</th>
+      <th>id</th>
       <th>Ime</th>
       <th>Priimek</th>
       <th>Email</th>
@@ -37,7 +37,7 @@
   <!-- Table Body -->
   <ng-template pTemplate="body" let-student let-i="rowIndex">
     <tr>
-      <td>{{ first + i + 1 }}</td>
+      <td>{{ student.id }}</td>
       <td>{{ student.firstName }}</td>
       <td>{{ student.lastName }}</td>
       <td>{{ student.email }}</td>

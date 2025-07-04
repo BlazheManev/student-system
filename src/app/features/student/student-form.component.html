@@ -1,1 +1,46 @@
-<p>student-form works!</p>
+<div class="student-form">
+  <h2>{{ isEditMode ? 'Edit Student Courses' : 'Add New Student' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="fields-container">
+
+      <div class="info-fields">
+        <label>
+          First Name
+          <input formControlName="firstName" [disabled]="isEditMode" />
+        </label>
+
+        <label>
+          Last Name
+          <input formControlName="lastName" [disabled]="isEditMode" />
+        </label>
+
+        <label>
+          Email
+          <input formControlName="email" type="email" [disabled]="isEditMode" />
+        </label>
+      </div>
+
+      <div class="courses-selection">
+        <h3>Select Courses</h3>
+        <div class="course-list">
+          <label *ngFor="let course of allCourses">
+            <input
+              type="checkbox"
+              [value]="course"
+              (change)="onCourseToggle(course, $event.target.checked)"
+              [checked]="form.value.courses.includes(course)"
+            />
+            {{ course }}
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="buttons">
+      <button type="submit" [disabled]="form.invalid">{{ isEditMode ? 'Update' : 'Create' }}</button>
+      <button type="button" class="cancel" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

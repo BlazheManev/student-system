@@ -1004,6 +1004,18 @@
         "Chemistry",
         "Physics"
       ]
+    },
+    {
+      "id": "e74b",
+      "firstName": "blazhe",
+      "lastName": "Manev",
+      "email": "blaze_manev@yahoo.com",
+      "courses": [
+        "Music",
+        "English",
+        "Economics",
+        "Chemistry"
+      ]
     }
   ]
 }
