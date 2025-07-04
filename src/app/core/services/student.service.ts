@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Student } from '../models/student.model';
-import { Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
@@ -14,21 +14,19 @@ export class StudentService {
     return this.http.get<Student[]>(this.apiUrl);
   }
 
-  getById(id: number): Observable<Student | undefined> {
-    return this.http.get<Student[]>(this.apiUrl).pipe(
-      map(students => students.find(student => student.id === id))
-    );
+  getById(id: number): Observable<Student> {
+    return this.http.get<Student>(`${this.apiUrl}/${id}`);
   }
 
   create(student: Student): Observable<Student> {
-    throw new Error('Create not supported with static JSON');
+    return this.http.post<Student>(this.apiUrl, student);
   }
 
   update(id: number, student: Student): Observable<Student> {
-    throw new Error('Update not supported with static JSON');
+    return this.http.put<Student>(`${this.apiUrl}/${id}`, student);
   }
 
   delete(id: number): Observable<void> {
-    throw new Error('Delete not supported with static JSON');
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }
