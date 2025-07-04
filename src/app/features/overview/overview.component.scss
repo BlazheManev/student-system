@@ -81,34 +81,40 @@
 
 // DROPDOWN MENU STYLING
 ::ng-deep .p-menu {
-  padding: 0;
+  padding: 0.4rem 0;
   border-radius: 8px;
-  background-color: #fff;
-  min-width: 140px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
   z-index: 9999;
+  transform: translateY(8px); // helps visually align the menu under the icon
 }
 
 ::ng-deep .p-menuitem {
   font-size: 0.85rem;
+  transition: background-color 0.2s ease;
 }
 
 ::ng-deep .p-menuitem-link {
-  padding: 0.7rem 1rem;
   color: #333;
   font-size: 14px;
+  align-items: center;
+  gap: 0.5rem;
   transition: background 0.2s ease;
+  border-radius: 4px;
+
 }
 
 ::ng-deep .p-menuitem-link:hover {
-  background-color: #f0f0f0;
+  background-color: #f2f2f2;
   color: #000;
 }
 
 ::ng-deep .p-menuitem-icon {
   margin-right: 0.5rem;
-  color: #777;
+  color: #666;
+  font-size: 1rem;
 }
 
 // BUTTONS
