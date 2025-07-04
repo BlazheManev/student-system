@@ -1,59 +1,85 @@
-# StudentSystem
+Student Information System - README
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+Naloga:
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Implement a simple student information system, where the user can:
+   - add a new student (basic student information and courses that student will be part of),
+   - edit the student (courses only),
+   - delete a student.
+ You will also have to implement a page with an overview of all students (a table where each row displays student information). Table should have pagination with 20 students per page.
 
-## Development server
+Attached to this email is a screenshot of a different table. Try to approach its appearance, to test your HTML and CSS skills. Ignore features that are not included in task description (like timezone dropdown, expandable rows, "super admin" tag, left sidebar...)
 
-To start a local development server, run:
+ Requirements:
+ - Routing (/overview page should be lazily loaded)
 
-```bash
-ng serve
+ Required technologies:
+ - Latest Angular
+ - PrimeNg (component library)
+ -----------------------------------------------------------------------------------------------------------------------------------------------
+Predlagamo, da za hranjenje kode uporabite enega od javnih ponudnikov Git-a (Github, BitBucket...) nam pa pošljete le uporabniška navodila za zagon in testiranje delovanja. Za "simulacijo" HTTP klicev na zaledni sistem lahko uporabite poljuben pristop (file, hardcodirane vrednosti ...). Lahko tudi "fake server" (https://github.com/typicode/json-server).
+
+Oddaja naloge ni časovno omejena, zato si lahko vzamete toliko časa, kot potrebujete.
+
+Če imate kakršna koli vprašanja v zvezi z nalogo, me lahko brez zadržkov kontaktirate.
+
+## Project Structure
+
 ```
+src/
+|-- app/
+|   |-- features/
+|   |   |-- overview/
+|   |   |   |-- overview.component.ts
+|   |   |   |-- overview.component.html
+|   |   |   |-- overview.component.css
+|   |   |-- student/
+|   |       |-- student-form.component.ts
+|   |       |-- student-form.component.html
+|   |       |-- student-form.component.css
+|   |-- core/
+|       |-- models/
+|       |   |-- student.model.ts
+|       |-- services/
+|           |-- student.service.ts
+|-- assets/
+|-- environments/
+|   |-- environment.ts
+|   |-- environment.prod.ts
+|-- styles.css
+|-- main.ts
+|-- index.html
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Docker
 
-## Code scaffolding
+- Dockerfile created to build Angular app and serve with nginx
+- Docker commands:
+  - `docker build -t your-dockerhub-username/student-system .`
+  - `docker run -p 80:80 your-dockerhub-username/student-system`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Tests
 
-```bash
-ng generate component component-name
-```
+- Unit tests using Angular TestBed and Jasmine
+- Tests located alongside components as `.spec.ts` files
+- Run tests locally with `ng test` or in CI with GitHub Actions
+- GitHub Actions configured to run tests on push, pull request, and manually
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Running locally
 
-```bash
-ng generate --help
-```
+- Start json-server separately with:
+  ```bash
+  json-server --watch db.json --port 3000
+  ```
+- Run Angular app with:
+  ```bash
+  ng serve
+  ```
+- The Angular app expects API at `http://localhost:3000` (configurable via environments)
 
-## Building
+## Notes
 
-To build the project run:
+- Use environment files to manage API URLs
+- Proxy config can be used during development if needed
+- Tests require HttpClientTestingModule and RouterTestingModule providers
+- GitHub Actions setup uses Node.js 18.x to meet Angular CLI requirements
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
