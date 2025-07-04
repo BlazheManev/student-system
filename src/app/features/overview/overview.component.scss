@@ -5,14 +5,44 @@
   margin-bottom: 1.5rem;
 }
 
-.custom-table ::ng-deep .p-datatable-thead > tr > th {
-  background-color: #f3f3f3;
-  color: #444;
-  font-weight: 600;
+.student-table {
+  background-color: #f8f8f9;
+  border-radius: 8px;
+  padding: 1rem;
 }
 
-.custom-table ::ng-deep .p-tag {
+.student-table ::ng-deep .p-datatable-thead > tr > th {
+  background-color: #433b4d;
+  color: #ffffff;
+  font-weight: 600;
+  border-bottom: 2px solid #5a4d6e;
   font-size: 0.85rem;
-  padding: 0.3rem 0.75rem;
+}
+
+.student-table ::ng-deep .p-datatable-tbody > tr > td {
+  color: #333;
+  font-size: 0.85rem;
+  vertical-align: middle;
+  background-color: #fcfcfd;
+}
+
+.student-table ::ng-deep .p-tag.course-tag {
+  margin: 2px 4px 2px 0;
+  font-size: 0.7rem;
   border-radius: 1rem;
+  background-color: #5a9bd4;
+  color: white;
+  padding: 0.3rem 0.75rem;
+}
+
+.student-table ::ng-deep .p-button.p-button-text {
+  color: #555;
+}
+
+.student-table ::ng-deep .p-button.p-button-danger {
+  color: #d9534f;
+}
+
+.student-table ::ng-deep .p-paginator .p-dropdown {
+  width: 70px;
 }

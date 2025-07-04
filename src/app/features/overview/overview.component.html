@@ -1,17 +1,25 @@
-<div class="overview-header">
+a<div class="overview-header">
   <h2>Seznam študentov</h2>
-  <button pButton icon="pi pi-plus" label="Dodaj novega" class="p-button-primary" (click)="onAdd()"></button>
+  <button
+    pButton
+    icon="pi pi-plus"
+    label="Dodaj novega"
+    class="p-button-primary"
+    (click)="onAdd()"
+  ></button>
 </div>
 
 <p-table
   [value]="students"
   [paginator]="true"
   [rows]="10"
+  [rowsPerPageOptions]="[10, 25, 50, 100]"
   responsiveLayout="scroll"
-  class="p-datatable-gridlines custom-table"
+  class="p-datatable-gridlines student-table"
 >
   <ng-template pTemplate="header">
     <tr>
+      <th>#</th>
       <th>Ime</th>
       <th>Priimek</th>
       <th>Email</th>
@@ -19,15 +27,37 @@
       <th style="width: 100px;">Dejanja</th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-student>
+
+  <ng-template pTemplate="body" let-student let-i="rowIndex">
     <tr>
+      <td>{{ i + 1 }}</td>
       <td>{{ student.firstName }}</td>
       <td>{{ student.lastName }}</td>
       <td>{{ student.email }}</td>
-      <td>{{ student.courses.join(', ') }}</td>
       <td>
-        <button pButton icon="pi pi-pencil" class="p-button-text" (click)="onEdit(student.id)"></button>
-        <button pButton icon="pi pi-trash" class="p-button-text p-button-danger" (click)="onDelete(student.id)"></button>
+        <ng-container *ngFor="let course of student.courses">
+          <p-tag
+            [value]="course"
+            severity="info"
+            class="course-tag"
+          ></p-tag>
+        </ng-container>
+      </td>
+      <td>
+        <div class="action-buttons">
+          <button
+            pButton
+            icon="pi pi-pencil"
+            class="p-button-text p-button-sm"
+            (click)="onEdit(student.id)"
+          ></button>
+          <button
+            pButton
+            icon="pi pi-trash"
+            class="p-button-text p-button-danger p-button-sm"
+            (click)="onDelete(student.id)"
+          ></button>
+        </div>
       </td>
     </tr>
   </ng-template>

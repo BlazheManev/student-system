@@ -2,24 +2,1008 @@
   "students": [
     {
       "id": 1,
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "john.doe@example.com",
-      "courses": ["Math", "Physics"]
+      "firstName": "Lucas",
+      "lastName": "Taylor",
+      "email": "lucas.taylor@example.com",
+      "courses": [
+        "Philosophy",
+        "Geography"
+      ]
     },
     {
       "id": 2,
-      "firstName": "Jane",
-      "lastName": "Smith",
-      "email": "jane.smith@example.com",
-      "courses": ["Chemistry", "Biology"]
+      "firstName": "Bob",
+      "lastName": "Scott",
+      "email": "bob.scott@example.com",
+      "courses": [
+        "Biology",
+        "Physics",
+        "Chemistry"
+      ]
     },
     {
       "id": 3,
-      "firstName": "Bob",
+      "firstName": "Jane",
+      "lastName": "Martinez",
+      "email": "jane.martinez@example.com",
+      "courses": [
+        "Philosophy"
+      ]
+    },
+    {
+      "id": 4,
+      "firstName": "Michael",
+      "lastName": "Anderson",
+      "email": "michael.anderson@example.com",
+      "courses": [
+        "Art",
+        "Economics",
+        "English"
+      ]
+    },
+    {
+      "id": 5,
+      "firstName": "Noah",
+      "lastName": "Smith",
+      "email": "noah.smith@example.com",
+      "courses": [
+        "Geography",
+        "History"
+      ]
+    },
+    {
+      "id": 6,
+      "firstName": "Emma",
+      "lastName": "Clark",
+      "email": "emma.clark@example.com",
+      "courses": [
+        "History"
+      ]
+    },
+    {
+      "id": 7,
+      "firstName": "Mia",
+      "lastName": "Hill",
+      "email": "mia.hill@example.com",
+      "courses": [
+        "Music"
+      ]
+    },
+    {
+      "id": 8,
+      "firstName": "Henry",
+      "lastName": "Allen",
+      "email": "henry.allen@example.com",
+      "courses": [
+        "English",
+        "Music"
+      ]
+    },
+    {
+      "id": 9,
+      "firstName": "Daniel",
+      "lastName": "Taylor",
+      "email": "daniel.taylor@example.com",
+      "courses": [
+        "Math"
+      ]
+    },
+    {
+      "id": 10,
+      "firstName": "Henry",
+      "lastName": "Wilson",
+      "email": "henry.wilson@example.com",
+      "courses": [
+        "Biology",
+        "Physics"
+      ]
+    },
+    {
+      "id": 11,
+      "firstName": "Michael",
+      "lastName": "Thomas",
+      "email": "michael.thomas@example.com",
+      "courses": [
+        "Computer Science"
+      ]
+    },
+    {
+      "id": 12,
+      "firstName": "Lucas",
+      "lastName": "Martinez",
+      "email": "lucas.martinez@example.com",
+      "courses": [
+        "Art",
+        "Chemistry"
+      ]
+    },
+    {
+      "id": 13,
+      "firstName": "James",
+      "lastName": "Anderson",
+      "email": "james.anderson@example.com",
+      "courses": [
+        "Geography",
+        "Chemistry"
+      ]
+    },
+    {
+      "id": 14,
+      "firstName": "Daniel",
       "lastName": "Brown",
-      "email": "bob.brown@example.com",
-      "courses": ["English"]
+      "email": "daniel.brown@example.com",
+      "courses": [
+        "Math",
+        "Physics"
+      ]
+    },
+    {
+      "id": 15,
+      "firstName": "Liam",
+      "lastName": "Walker",
+      "email": "liam.walker@example.com",
+      "courses": [
+        "Philosophy",
+        "Computer Science",
+        "Math"
+      ]
+    },
+    {
+      "id": 16,
+      "firstName": "Bob",
+      "lastName": "Johnson",
+      "email": "bob.johnson@example.com",
+      "courses": [
+        "Philosophy",
+        "Math"
+      ]
+    },
+    {
+      "id": 17,
+      "firstName": "Emma",
+      "lastName": "Thomas",
+      "email": "emma.thomas@example.com",
+      "courses": [
+        "Biology"
+      ]
+    },
+    {
+      "id": 18,
+      "firstName": "Alice",
+      "lastName": "White",
+      "email": "alice.white@example.com",
+      "courses": [
+        "Philosophy",
+        "Economics",
+        "Chemistry"
+      ]
+    },
+    {
+      "id": 19,
+      "firstName": "Bob",
+      "lastName": "Hall",
+      "email": "bob.hall@example.com",
+      "courses": [
+        "Philosophy",
+        "Biology"
+      ]
+    },
+    {
+      "id": 20,
+      "firstName": "Jane",
+      "lastName": "Wright",
+      "email": "jane.wright@example.com",
+      "courses": [
+        "Computer Science",
+        "Philosophy",
+        "Music"
+      ]
+    },
+    {
+      "id": 21,
+      "firstName": "Jane",
+      "lastName": "Hill",
+      "email": "jane.hill@example.com",
+      "courses": [
+        "Chemistry"
+      ]
+    },
+    {
+      "id": 22,
+      "firstName": "Ava",
+      "lastName": "Young",
+      "email": "ava.young@example.com",
+      "courses": [
+        "History",
+        "Physics"
+      ]
+    },
+    {
+      "id": 23,
+      "firstName": "Grace",
+      "lastName": "White",
+      "email": "grace.white@example.com",
+      "courses": [
+        "Geography",
+        "History",
+        "Math"
+      ]
+    },
+    {
+      "id": 24,
+      "firstName": "Daniel",
+      "lastName": "Wright",
+      "email": "daniel.wright@example.com",
+      "courses": [
+        "English"
+      ]
+    },
+    {
+      "id": 25,
+      "firstName": "Michael",
+      "lastName": "Young",
+      "email": "michael.young@example.com",
+      "courses": [
+        "Math"
+      ]
+    },
+    {
+      "id": 26,
+      "firstName": "Emma",
+      "lastName": "Walker",
+      "email": "emma.walker@example.com",
+      "courses": [
+        "Biology"
+      ]
+    },
+    {
+      "id": 27,
+      "firstName": "Alice",
+      "lastName": "Lee",
+      "email": "alice.lee@example.com",
+      "courses": [
+        "History"
+      ]
+    },
+    {
+      "id": 28,
+      "firstName": "Alice",
+      "lastName": "Clark",
+      "email": "alice.clark@example.com",
+      "courses": [
+        "Math"
+      ]
+    },
+    {
+      "id": 29,
+      "firstName": "Henry",
+      "lastName": "Anderson",
+      "email": "henry.anderson@example.com",
+      "courses": [
+        "Biology"
+      ]
+    },
+    {
+      "id": 30,
+      "firstName": "Emily",
+      "lastName": "Hill",
+      "email": "emily.hill@example.com",
+      "courses": [
+        "Biology"
+      ]
+    },
+    {
+      "id": 31,
+      "firstName": "David",
+      "lastName": "Brown",
+      "email": "david.brown@example.com",
+      "courses": [
+        "Physics",
+        "Chemistry"
+      ]
+    },
+    {
+      "id": 32,
+      "firstName": "Mia",
+      "lastName": "Smith",
+      "email": "mia.smith@example.com",
+      "courses": [
+        "Music",
+        "English"
+      ]
+    },
+    {
+      "id": 33,
+      "firstName": "Bob",
+      "lastName": "King",
+      "email": "bob.king@example.com",
+      "courses": [
+        "Computer Science",
+        "Philosophy",
+        "Geography"
+      ]
+    },
+    {
+      "id": 34,
+      "firstName": "Mia",
+      "lastName": "Brown",
+      "email": "mia.brown@example.com",
+      "courses": [
+        "Philosophy",
+        "English"
+      ]
+    },
+    {
+      "id": 35,
+      "firstName": "Mia",
+      "lastName": "Smith",
+      "email": "mia.smith@example.com",
+      "courses": [
+        "Economics"
+      ]
+    },
+    {
+      "id": 36,
+      "firstName": "Henry",
+      "lastName": "Clark",
+      "email": "henry.clark@example.com",
+      "courses": [
+        "Music",
+        "Biology",
+        "Philosophy"
+      ]
+    },
+    {
+      "id": 37,
+      "firstName": "Olivia",
+      "lastName": "White",
+      "email": "olivia.white@example.com",
+      "courses": [
+        "Art",
+        "Geography",
+        "History"
+      ]
+    },
+    {
+      "id": 38,
+      "firstName": "James",
+      "lastName": "Brown",
+      "email": "james.brown@example.com",
+      "courses": [
+        "Computer Science",
+        "Geography"
+      ]
+    },
+    {
+      "id": 39,
+      "firstName": "Emma",
+      "lastName": "Martinez",
+      "email": "emma.martinez@example.com",
+      "courses": [
+        "Philosophy",
+        "Music"
+      ]
+    },
+    {
+      "id": 40,
+      "firstName": "Emily",
+      "lastName": "Hall",
+      "email": "emily.hall@example.com",
+      "courses": [
+        "Chemistry"
+      ]
+    },
+    {
+      "id": 41,
+      "firstName": "Liam",
+      "lastName": "Anderson",
+      "email": "liam.anderson@example.com",
+      "courses": [
+        "History",
+        "Art"
+      ]
+    },
+    {
+      "id": 42,
+      "firstName": "Emily",
+      "lastName": "Brown",
+      "email": "emily.brown@example.com",
+      "courses": [
+        "Biology",
+        "Chemistry",
+        "Geography"
+      ]
+    },
+    {
+      "id": 43,
+      "firstName": "Ella",
+      "lastName": "Taylor",
+      "email": "ella.taylor@example.com",
+      "courses": [
+        "Geography",
+        "Biology"
+      ]
+    },
+    {
+      "id": 44,
+      "firstName": "Henry",
+      "lastName": "Hill",
+      "email": "henry.hill@example.com",
+      "courses": [
+        "Economics",
+        "Math"
+      ]
+    },
+    {
+      "id": 45,
+      "firstName": "Ella",
+      "lastName": "Scott",
+      "email": "ella.scott@example.com",
+      "courses": [
+        "Chemistry"
+      ]
+    },
+    {
+      "id": 46,
+      "firstName": "Emma",
+      "lastName": "Taylor",
+      "email": "emma.taylor@example.com",
+      "courses": [
+        "Biology"
+      ]
+    },
+    {
+      "id": 47,
+      "firstName": "Emily",
+      "lastName": "Lee",
+      "email": "emily.lee@example.com",
+      "courses": [
+        "Art"
+      ]
+    },
+    {
+      "id": 48,
+      "firstName": "Daniel",
+      "lastName": "Allen",
+      "email": "daniel.allen@example.com",
+      "courses": [
+        "Music",
+        "Art",
+        "Biology"
+      ]
+    },
+    {
+      "id": 49,
+      "firstName": "Alice",
+      "lastName": "Hall",
+      "email": "alice.hall@example.com",
+      "courses": [
+        "Math",
+        "Economics"
+      ]
+    },
+    {
+      "id": 50,
+      "firstName": "Michael",
+      "lastName": "Hall",
+      "email": "michael.hall@example.com",
+      "courses": [
+        "Music",
+        "Biology",
+        "Geography"
+      ]
+    },
+    {
+      "id": 51,
+      "firstName": "James",
+      "lastName": "Hill",
+      "email": "james.hill@example.com",
+      "courses": [
+        "Computer Science",
+        "Music",
+        "History"
+      ]
+    },
+    {
+      "id": 52,
+      "firstName": "Jane",
+      "lastName": "Taylor",
+      "email": "jane.taylor@example.com",
+      "courses": [
+        "Chemistry",
+        "History"
+      ]
+    },
+    {
+      "id": 53,
+      "firstName": "Grace",
+      "lastName": "King",
+      "email": "grace.king@example.com",
+      "courses": [
+        "Art",
+        "History",
+        "Physics"
+      ]
+    },
+    {
+      "id": 54,
+      "firstName": "Ella",
+      "lastName": "Thomas",
+      "email": "ella.thomas@example.com",
+      "courses": [
+        "Math"
+      ]
+    },
+    {
+      "id": 55,
+      "firstName": "Liam",
+      "lastName": "Hill",
+      "email": "liam.hill@example.com",
+      "courses": [
+        "Music",
+        "History"
+      ]
+    },
+    {
+      "id": 56,
+      "firstName": "Alice",
+      "lastName": "Martinez",
+      "email": "alice.martinez@example.com",
+      "courses": [
+        "Economics",
+        "English",
+        "Philosophy"
+      ]
+    },
+    {
+      "id": 57,
+      "firstName": "John",
+      "lastName": "Martinez",
+      "email": "john.martinez@example.com",
+      "courses": [
+        "Physics",
+        "English",
+        "Economics"
+      ]
+    },
+    {
+      "id": 58,
+      "firstName": "James",
+      "lastName": "Thomas",
+      "email": "james.thomas@example.com",
+      "courses": [
+        "Physics",
+        "English",
+        "Music"
+      ]
+    },
+    {
+      "id": 59,
+      "firstName": "Grace",
+      "lastName": "Brown",
+      "email": "grace.brown@example.com",
+      "courses": [
+        "Math"
+      ]
+    },
+    {
+      "id": 60,
+      "firstName": "Henry",
+      "lastName": "Doe",
+      "email": "henry.doe@example.com",
+      "courses": [
+        "Philosophy"
+      ]
+    },
+    {
+      "id": 61,
+      "firstName": "Emma",
+      "lastName": "Anderson",
+      "email": "emma.anderson@example.com",
+      "courses": [
+        "Music",
+        "Physics",
+        "Economics"
+      ]
+    },
+    {
+      "id": 62,
+      "firstName": "Noah",
+      "lastName": "Walker",
+      "email": "noah.walker@example.com",
+      "courses": [
+        "Art",
+        "Computer Science",
+        "Music"
+      ]
+    },
+    {
+      "id": 63,
+      "firstName": "Michael",
+      "lastName": "Allen",
+      "email": "michael.allen@example.com",
+      "courses": [
+        "Computer Science",
+        "Geography"
+      ]
+    },
+    {
+      "id": 64,
+      "firstName": "Sophia",
+      "lastName": "Thomas",
+      "email": "sophia.thomas@example.com",
+      "courses": [
+        "English"
+      ]
+    },
+    {
+      "id": 65,
+      "firstName": "James",
+      "lastName": "Hall",
+      "email": "james.hall@example.com",
+      "courses": [
+        "Philosophy",
+        "Art",
+        "Biology"
+      ]
+    },
+    {
+      "id": 66,
+      "firstName": "Sophia",
+      "lastName": "Taylor",
+      "email": "sophia.taylor@example.com",
+      "courses": [
+        "Economics",
+        "Music"
+      ]
+    },
+    {
+      "id": 67,
+      "firstName": "Michael",
+      "lastName": "Wright",
+      "email": "michael.wright@example.com",
+      "courses": [
+        "Chemistry",
+        "Geography",
+        "Economics"
+      ]
+    },
+    {
+      "id": 68,
+      "firstName": "Emma",
+      "lastName": "Martinez",
+      "email": "emma.martinez@example.com",
+      "courses": [
+        "Biology",
+        "Geography"
+      ]
+    },
+    {
+      "id": 69,
+      "firstName": "Emma",
+      "lastName": "Taylor",
+      "email": "emma.taylor@example.com",
+      "courses": [
+        "English",
+        "Geography"
+      ]
+    },
+    {
+      "id": 70,
+      "firstName": "Michael",
+      "lastName": "Walker",
+      "email": "michael.walker@example.com",
+      "courses": [
+        "History",
+        "Biology",
+        "Music"
+      ]
+    },
+    {
+      "id": 71,
+      "firstName": "Noah",
+      "lastName": "Clark",
+      "email": "noah.clark@example.com",
+      "courses": [
+        "English"
+      ]
+    },
+    {
+      "id": 72,
+      "firstName": "Olivia",
+      "lastName": "Brown",
+      "email": "olivia.brown@example.com",
+      "courses": [
+        "Geography",
+        "Chemistry",
+        "Economics"
+      ]
+    },
+    {
+      "id": 73,
+      "firstName": "Emma",
+      "lastName": "Hall",
+      "email": "emma.hall@example.com",
+      "courses": [
+        "English",
+        "Philosophy"
+      ]
+    },
+    {
+      "id": 74,
+      "firstName": "Ella",
+      "lastName": "King",
+      "email": "ella.king@example.com",
+      "courses": [
+        "Biology",
+        "History",
+        "Math"
+      ]
+    },
+    {
+      "id": 75,
+      "firstName": "James",
+      "lastName": "Hill",
+      "email": "james.hill@example.com",
+      "courses": [
+        "Physics",
+        "English",
+        "Art"
+      ]
+    },
+    {
+      "id": 76,
+      "firstName": "David",
+      "lastName": "Wilson",
+      "email": "david.wilson@example.com",
+      "courses": [
+        "Geography",
+        "Physics"
+      ]
+    },
+    {
+      "id": 77,
+      "firstName": "Alice",
+      "lastName": "Johnson",
+      "email": "alice.johnson@example.com",
+      "courses": [
+        "Computer Science",
+        "Chemistry",
+        "Physics"
+      ]
+    },
+    {
+      "id": 78,
+      "firstName": "Michael",
+      "lastName": "Lee",
+      "email": "michael.lee@example.com",
+      "courses": [
+        "English",
+        "Biology"
+      ]
+    },
+    {
+      "id": 79,
+      "firstName": "Bob",
+      "lastName": "Doe",
+      "email": "bob.doe@example.com",
+      "courses": [
+        "Computer Science"
+      ]
+    },
+    {
+      "id": 80,
+      "firstName": "Emily",
+      "lastName": "Clark",
+      "email": "emily.clark@example.com",
+      "courses": [
+        "History",
+        "Biology"
+      ]
+    },
+    {
+      "id": 81,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "courses": [
+        "Music",
+        "Physics",
+        "Chemistry"
+      ]
+    },
+    {
+      "id": 82,
+      "firstName": "Sophia",
+      "lastName": "White",
+      "email": "sophia.white@example.com",
+      "courses": [
+        "Biology",
+        "Philosophy"
+      ]
+    },
+    {
+      "id": 83,
+      "firstName": "Ava",
+      "lastName": "White",
+      "email": "ava.white@example.com",
+      "courses": [
+        "Art",
+        "Geography"
+      ]
+    },
+    {
+      "id": 84,
+      "firstName": "Grace",
+      "lastName": "Smith",
+      "email": "grace.smith@example.com",
+      "courses": [
+        "Art",
+        "Economics"
+      ]
+    },
+    {
+      "id": 85,
+      "firstName": "Henry",
+      "lastName": "Clark",
+      "email": "henry.clark@example.com",
+      "courses": [
+        "Art",
+        "Chemistry",
+        "Music"
+      ]
+    },
+    {
+      "id": 86,
+      "firstName": "John",
+      "lastName": "Young",
+      "email": "john.young@example.com",
+      "courses": [
+        "Computer Science"
+      ]
+    },
+    {
+      "id": 87,
+      "firstName": "John",
+      "lastName": "Young",
+      "email": "john.young@example.com",
+      "courses": [
+        "Economics",
+        "English"
+      ]
+    },
+    {
+      "id": 88,
+      "firstName": "Alice",
+      "lastName": "Scott",
+      "email": "alice.scott@example.com",
+      "courses": [
+        "Art",
+        "Music",
+        "Philosophy"
+      ]
+    },
+    {
+      "id": 89,
+      "firstName": "David",
+      "lastName": "Thomas",
+      "email": "david.thomas@example.com",
+      "courses": [
+        "Economics",
+        "Chemistry",
+        "History"
+      ]
+    },
+    {
+      "id": 90,
+      "firstName": "Alice",
+      "lastName": "Wright",
+      "email": "alice.wright@example.com",
+      "courses": [
+        "History",
+        "Physics",
+        "Music"
+      ]
+    },
+    {
+      "id": 91,
+      "firstName": "James",
+      "lastName": "Clark",
+      "email": "james.clark@example.com",
+      "courses": [
+        "Math",
+        "Computer Science",
+        "Biology"
+      ]
+    },
+    {
+      "id": 92,
+      "firstName": "Liam",
+      "lastName": "Smith",
+      "email": "liam.smith@example.com",
+      "courses": [
+        "Physics"
+      ]
+    },
+    {
+      "id": 93,
+      "firstName": "John",
+      "lastName": "Brown",
+      "email": "john.brown@example.com",
+      "courses": [
+        "Philosophy",
+        "Chemistry"
+      ]
+    },
+    {
+      "id": 94,
+      "firstName": "Sophia",
+      "lastName": "Hill",
+      "email": "sophia.hill@example.com",
+      "courses": [
+        "Physics"
+      ]
+    },
+    {
+      "id": 95,
+      "firstName": "Ava",
+      "lastName": "Thomas",
+      "email": "ava.thomas@example.com",
+      "courses": [
+        "Economics",
+        "Geography"
+      ]
+    },
+    {
+      "id": 96,
+      "firstName": "Daniel",
+      "lastName": "Walker",
+      "email": "daniel.walker@example.com",
+      "courses": [
+        "Math",
+        "Geography"
+      ]
+    },
+    {
+      "id": 97,
+      "firstName": "James",
+      "lastName": "Doe",
+      "email": "james.doe@example.com",
+      "courses": [
+        "Geography",
+        "History",
+        "Physics"
+      ]
+    },
+    {
+      "id": 98,
+      "firstName": "Michael",
+      "lastName": "Clark",
+      "email": "michael.clark@example.com",
+      "courses": [
+        "Art",
+        "Chemistry"
+      ]
+    },
+    {
+      "id": 99,
+      "firstName": "Mia",
+      "lastName": "Hall",
+      "email": "mia.hall@example.com",
+      "courses": [
+        "Chemistry",
+        "History"
+      ]
+    },
+    {
+      "id": 100,
+      "firstName": "Noah",
+      "lastName": "Thomas",
+      "email": "noah.thomas@example.com",
+      "courses": [
+        "Chemistry",
+        "Physics"
+      ]
     }
   ]
 }
