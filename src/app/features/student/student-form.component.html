@@ -27,8 +27,9 @@
           <label *ngFor="let course of allCourses">
             <input
               type="checkbox"
+              #checkbox
               [value]="course"
-              (change)="onCourseToggle(course, $event.target.checked)"
+              (change)="onCourseToggle(course, checkbox.checked)"
               [checked]="form.value.courses.includes(course)"
             />
             {{ course }}

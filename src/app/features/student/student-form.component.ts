@@ -29,7 +29,6 @@ export class StudentFormComponent implements OnInit {
     "Economics", "English", "History", "Music", "Math", "Computer Science"
   ];
 
-  // THIS is the fix — prepare options here for the template
   allCoursesOptions = this.allCourses.map(c => ({ label: c, value: c }));
 
   constructor(
@@ -41,6 +40,8 @@ export class StudentFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.studentId = Number(this.route.snapshot.paramMap.get('id'));
+    console.log('studentId from route:', this.studentId);
+
     this.isEditMode = !!this.studentId;
 
     this.form = this.fb.group({
@@ -55,26 +56,32 @@ export class StudentFormComponent implements OnInit {
     }
   }
 
-  loadStudent(id: number) {
-    this.studentService.getById(id).subscribe({
-      next: (student) => {
-        this.form.patchValue({
-          firstName: student.firstName,
-          lastName: student.lastName,
-          email: student.email,
-          courses: student.courses || []
-        });
-      },
-      error: (err) => console.error('Failed to load student', err)
-    });
-  }
+loadStudent(id: number) {
+  this.studentService.getById(id).subscribe({
+    next: (student) => {
+      console.log('Loaded student:', student);
+      if (!student) {
+        console.error('No student found with ID', id);
+      }
+      this.form.patchValue({
+        firstName: student.firstName,
+        lastName: student.lastName,
+        email: student.email,
+        courses: student.courses || []
+      });
+    },
+    error: (err) => {
+      console.error('Failed to load student', err);
+    }
+  });
+}
+
   onSubmit() {
     if (this.form.invalid) return;
 
-    const formValue = this.form.getRawValue(); // includes disabled fields
+    const formValue = this.form.getRawValue();
 
     if (this.isEditMode && this.studentId) {
-      // Create full updated student object with id included
       const updatedStudent: Student = {
         id: this.studentId,
         firstName: formValue.firstName,
@@ -82,13 +89,12 @@ export class StudentFormComponent implements OnInit {
         email: formValue.email,
         courses: formValue.courses
       };
-
+      console.log('Updating student:', updatedStudent);
       this.studentService.update(this.studentId, updatedStudent).subscribe({
         next: () => this.router.navigate(['/overview']),
         error: (err) => console.error('Update failed', err)
       });
     } else {
-      // Create new student (all fields required)
       this.studentService.create(formValue).subscribe({
         next: () => this.router.navigate(['/overview']),
         error: (err) => console.error('Creation failed', err)
@@ -96,20 +102,22 @@ export class StudentFormComponent implements OnInit {
     }
   }
 
-onCourseToggle(course: string, checked: boolean) {
-  const courses: string[] = [...this.form.value.courses];
-  if (checked) {
-    if (!courses.includes(course)) {
-      courses.push(course);
+  onCourseToggle(course: string, checked: boolean) {
+    const courses: string[] = [...this.form.value.courses];
+    if (checked) {
+      if (!courses.includes(course)) {
+        courses.push(course);
+      }
+    } else {
+      const index = courses.indexOf(course);
+      if (index > -1) {
+        courses.splice(index, 1);
+      }
     }
-  } else {
-    const index = courses.indexOf(course);
-    if (index > -1) {
-      courses.splice(index, 1);
-    }
+    this.form.get('courses')?.setValue(courses);
+    console.log('Current courses:', courses);
   }
-  this.form.get('courses')?.setValue(courses);
-}
+
   onCancel() {
     this.router.navigate(['/overview']);
   }

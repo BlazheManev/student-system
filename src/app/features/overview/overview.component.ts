@@ -55,6 +55,8 @@ export class OverviewComponent implements OnInit {
   }
 
    onEdit(id: number): void {
+    console.log("Sfsfsf")
+    console.log(id)
     this.router.navigate(['/student/edit', id]);  // Navigate to edit form page with student ID
   }
 
