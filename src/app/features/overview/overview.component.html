@@ -8,21 +8,7 @@
     (click)="onAdd()"
   ></button>
 </div>
-<div class="pagination-controls" style="margin-bottom: 1rem;">
-  <button pButton type="button" icon="pi pi-chevron-left" 
-          (click)="prev()" 
-          [disabled]="isFirstPage()" 
-          text="true"></button>
 
-  <button pButton type="button" icon="pi pi-refresh" 
-          (click)="reset()" 
-          text="true"></button>
-
-  <button pButton type="button" icon="pi pi-chevron-right" 
-          (click)="next()" 
-          [disabled]="isLastPage()" 
-          text="true"></button>
-</div>
 <p-table
   [value]="students"
   [paginator]="true"
