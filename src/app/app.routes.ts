@@ -2,22 +2,16 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'overview',
-    pathMatch: 'full',
-  },
-  {
     path: 'overview',
-    loadChildren: () =>
-      import('../app/features/overview/overview.routes').then((m) => m.OVERVIEW_ROUTES),
+    loadComponent: () => import('./features/overview/overview.component').then(m => m.OverviewComponent)
   },
   {
     path: 'student',
-    loadChildren: () =>
-      import('../app/features/student/student.routes').then((m) => m.STUDENT_ROUTES),
+    loadChildren: () => import('./features/student/student.routes').then(m => m.STUDENT_ROUTES)
   },
   {
-    path: '**',
-    redirectTo: 'overview',
+    path: '',
+    redirectTo: '/overview',
+    pathMatch: 'full'
   }
 ];
