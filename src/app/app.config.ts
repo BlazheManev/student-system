@@ -1,11 +1,10 @@
-import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
-
 import { providePrimeNG } from 'primeng/config';
-import Material from '@primeng/themes/material'; 
+import Lara from '@primeng/themes/lara'; 
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,10 +14,10 @@ export const appConfig: ApplicationConfig = {
     providePrimeNG({
       ripple: true,
       theme: {
-        preset: Material,
+        preset: Lara,
         options: {
+          presetName: 'dark-purple', 
           prefix: 'p',
-          darkModeSelector: '.dark-theme'
         }
       }
     })
