@@ -76,7 +76,7 @@ src/
    ng serve
    ```
 
-3. The Angular app expects the backend API at `http://localhost:3000` (this URL is configurable in the environment files).
+3. The Angular app expects the backend API at `http://localhost:3000`
 
 ---
 
@@ -107,9 +107,4 @@ docker run -p 80:80 blazhe/student-system
 
 ---
 
-## Notes
 
-- Environment files (`environment.ts` and `environment.prod.ts`) manage API URLs and other environment-specific settings.
-- Proxy configuration can be added during development to forward API requests.
-- Tests require HttpClientTestingModule and RouterTestingModule for HTTP and routing mocks.
-- The project uses Angular 16+ and PrimeNG latest versions.
